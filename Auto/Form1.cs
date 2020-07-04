@@ -15,6 +15,19 @@ namespace Auto
         public Form1()
         {
             InitializeComponent();
+            if (FormAuthorization.users.type == "Пользователь") buttonEditCars.Enabled=false ;
+        }
+
+        private void buttonOpenCars_Click(object sender, EventArgs e)
+        {
+            Form formCars = new FormCars();
+            formCars.Show();
+        }
+
+        private void buttonEditCars_Click(object sender, EventArgs e)
+        {
+            Form formEditCars = new FormEditCars();
+            formEditCars.Show();
         }
     }
 }
